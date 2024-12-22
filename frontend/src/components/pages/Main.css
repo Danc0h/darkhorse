@@ -1,0 +1,101 @@
+/* App.css */
+
+/* General Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Main App Container */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main Content Area */
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  transition: all 0.3s;
+  width: 100%; /* Ensures the content takes full width */
+}
+.tab-content {
+  font-size: 1.2em;
+  text-align: center;
+  width: 100%;
+}
+
+/* Bottom Tab Navigation for Mobile */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw; /* Ensures it takes the full viewport width */
+  max-width: 100%; /* Prevents overflow on mobile */
+  background-color: #005f9e;
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.15);
+}
+.bottom-nav button {
+  flex: 1;
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: color 0.3s;
+  text-align: center;
+}
+.bottom-nav button:hover {
+  color: #c7f900;
+}
+.bottom-nav button.active {
+  font-weight: bold;
+  color: #c7f900;
+}
+
+/* Responsive Navigation for Larger Screens */
+@media (min-width: 768px) {
+  .bottom-nav {
+    position: static;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin-bottom: 20px; /* Space between buttons and content */
+  }
+  .bottom-nav button {
+    width: auto;
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-align: center;
+  }
+  .content {
+    padding: 20px;
+  }
+}
+
+/* Table Styling */
+.table-responsive {
+  overflow-x: auto; /* Enables horizontal scrolling on small screens */
+  max-width: 100%; /* Keeps table within content width */
+}
+.table {
+  width: 100%; /* Full width within the responsive container */
+}

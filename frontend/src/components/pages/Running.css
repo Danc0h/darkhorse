@@ -1,0 +1,51 @@
+/* RunningTips.css */
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.day-section {
+  margin-bottom: 20px;
+  background-color: #333;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.header {
+  background-color: #005f9e;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Default single column layout */
+.day-section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grid layout for card containers (day-sections) on larger screens */
+@media (min-width: 768px) {
+  .container {
+    padding: 40px;
+  }
+
+  /* Grid for day-section containers */
+  .date-key {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+    gap: 20px;
+  }
+
+  /* Keeping the content inside day-sections flexed in column */
+  .day-section {
+    display: flex;
+    flex-direction: column;
+  }
+}

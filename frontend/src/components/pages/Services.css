@@ -1,0 +1,100 @@
+.services-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services-header h1 {
+  font-size: 2.5em;
+  color: #1f1f38;
+}
+
+.services-header h2 {
+  color: #1f1f38;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+/*.service-item:hover {
+  transform: scale(1.02);
+}*/
+
+.service-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.service-content {
+  max-width: 500px;
+  padding: 10px;
+}
+
+.service-content h2 {
+  font-size: 1.8em;
+  color: #1f1f38;
+  margin-bottom: 10px;
+}
+
+.service-content p {
+  font-size: 1em;
+  color: #1f1f38;
+  line-height: 1.6;
+}
+.join-us-button {
+  background-color: #ff7f50; /* Change color as desired */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.join-us-button:hover {
+  background-color: #ff6347; /* Hover color */
+}
+
+@media (min-width: 768px) {
+  /* For tablets and larger screens */
+  .service-item {
+    flex-direction: row;
+    text-align: left;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .service-item.even {
+    flex-direction: row;
+  }
+
+  .service-item.odd {
+    flex-direction: row-reverse;
+  }
+}
